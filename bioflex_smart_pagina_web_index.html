@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BIOFLEX SMART — Plantillas Inteligentes</title>
+  <meta name="description" content="Plantillas inteligentes que monitorean tu postura y biomecánica en tiempo real. BIOFLEX SMART." />
+  <style>
+    :root{
+      --brand-blue:#0b84c9; /* azul del logo */
+      --brand-green:#39b56a; /* verde del logo */
+      --accent:#0a2a3a; /* texto oscuro */
+      --muted:#6b7a85;
+      --card:#ffffff;
+      --radius:14px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:#f6f9fb;color:var(--accent);line-height:1.4}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand img{width:92px;height:92px;object-fit:contain}
+    .brand h1{margin:0;font-size:20px;letter-spacing:1px}
+
+    nav a{margin-left:18px;color:var(--muted);text-decoration:none;font-weight:600}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin:18px 0}
+    .hero .copy h2{font-size:32px;margin:0 0 12px}
+    .hero .copy p{margin:0 0 18px;color:var(--muted)}
+    .cta{display:flex;gap:12px}
+    .btn{padding:12px 18px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+    .btn-primary{background:linear-gradient(90deg,var(--brand-blue),var(--brand-green));color:white}
+    .btn-outline{background:transparent;border:2px solid var(--brand-blue);color:var(--brand-blue)}
+
+    .features{display:flex;gap:14px;margin:26px 0}
+    .feature{flex:1;background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(11,20,30,0.06)}
+    .feature h3{margin:0 0 8px}
+    .feature p{margin:0;color:var(--muted)}
+
+    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:26px 0}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(11,20,30,0.06);display:flex;flex-direction:column;gap:12px}
+    .price{font-size:20px;font-weight:800;color:var(--brand-blue)}
+    .meta{color:var(--muted);font-size:14px}
+
+    .subscribe{display:flex;gap:12px;align-items:center;margin:12px 0}
+    .tiny{font-size:13px;color:var(--muted)}
+
+    footer{margin:36px 0 18px;padding-top:18px;border-top:1px solid #e6eef2;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr}
+      .brand img{width:72px;height:72px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <!-- Ruta local al logo subida por el usuario -->
+        <img src="/mnt/data/Diseño sin título.png" alt="Logo BIOFLEX SMART" />
+        <div>
+          <h1>BIOFLEX SMART</h1>
+          <div style="font-size:13px;color:var(--muted)">Plantillas inteligentes — "Asistente Fantasma"</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#productos">Productos</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#suscripcion">Suscripción</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="copy">
+        <h2>Plantillas inteligentes que cuidan tu postura en tiempo real</h2>
+        <p>BIOFLEX SMART convierte datos de movimiento en recomendaciones prácticas. Detecta sobrecargas, sugiere correcciones y ayuda a prevenir dolores y lesiones.</p>
+        <div class="cta">
+          <button class="btn btn-primary" onclick="location.href='#productos'">Ver productos</button>
+          <button class="btn btn-outline" onclick="openSubscribe()">Suscribirse Q.25/mes</button>
+        </div>
+        <div style="margin-top:18px;color:var(--muted)"><strong>Modelo recomendado:</strong> BIOFLEX Pro — análisis biomecánico avanzado para deportistas.</div>
+      </div>
+
+      <aside style="background:linear-gradient(180deg,#ffffff,#f0fbf6);padding:18px;border-radius:12px;box-shadow:0 10px 30px rgba(11,20,30,0.06)">
+        <h3 style="margin-top:0">¿Qué hace el Asistente Fantasma?</h3>
+        <ul style="margin:8px 0 0 18px;color:var(--muted)">
+          <li>Monitorea postura y biomecánica en tiempo real</li>
+          <li>Sugiere correcciones personalizadas</li>
+          <li>Alerta sobre sobrecargas y riesgo de lesión</li>
+          <li>Genera reportes para clínicas y entrenadores</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="beneficios">
+      <div class="features">
+        <div class="feature">
+          <h3>Prevención</h3>
+          <p>Detecta malas posturas antes de que generen dolor crónico.</p>
+        </div>
+        <div class="feature">
+          <h3>Rendimiento</h3>
+          <p>Optimiza la biomecánica para mejorar desempeño deportivo.</p>
+        </div>
+        <div class="feature">
+          <h3>Conexión clínica</h3>
+          <p>Informes y alianzas con clínicas y gimnasios para seguimiento profesional.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="productos">
+      <h2>Productos</h2>
+      <div class="products">
+        <div class="card">
+          <h3>BIOFLEX Basic</h3>
+          <div class="meta">Monitoreo postural accesible — 5 sensores • batería 12 meses</div>
+          <div style="flex:1"></div>
+          <div class="price">Q.199</div>
+          <div class="meta">Incluye la app y seguimiento básico. Ideal para uso diario.</div>
+          <div style="display:flex;gap:10px;margin-top:12px">
+            <button class="btn btn-primary" onclick="addToCart('Basic')">Comprar</button>
+            <button class="btn btn-outline" onclick="openSubscribe()">Suscripción</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>BIOFLEX Pro</h3>
+          <div class="meta">Análisis biomecánico avanzado — 12 sensores • carga por inducción</div>
+          <div style="flex:1"></div>
+          <div class="price">Q.500</div>
+          <div class="meta">Recomendado para deportistas y uso profesional.</div>
+          <div style="display:flex;gap:10px;margin-top:12px">
+            <button class="btn btn-primary" onclick="addToCart('Pro')">Comprar</button>
+            <button class="btn btn-outline" onclick="openSubscribe()">Suscripción</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:18px;padding:14px;border-radius:12px;background:linear-gradient(90deg,rgba(11,132,201,0.06),rgba(57,181,106,0.04));display:flex;align-items:center;justify-content:space-between">
+        <div>
+          <strong>Ingreso recurrente:</strong> Suscripción "Asistente Fantasma Plus" — Q.25/mes. Acceso a alertas avanzadas, reportes mensuales y soporte prioritario.
+        </div>
+        <div>
+          <button class="btn btn-primary" onclick="openSubscribe()">Activar Asistente Fantasma Plus</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="suscripcion" style="margin-top:22px">
+      <h2>Suscripción y alianzas</h2>
+      <p class="tiny">Ofrecemos planes de suscripción para usuarios y paquetes para clínicas/gimnasios con integración de reportes y dashboards especializados.</p>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+        <div style="background:var(--card);padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(11,20,30,0.04);min-width:220px">
+          <strong>Asistente Fantasma Plus</strong>
+          <div class="meta">Q.25/mes — alertas avanzadas, sugerencias personalizadas y reportes.</div>
+          <div style="margin-top:10px"><button class="btn btn-primary" onclick="openSubscribe()">Suscribirme</button></div>
+        </div>
+
+        <div style="background:var(--card);padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(11,20,30,0.04);min-width:220px">
+          <strong>Paquetes para profesionales</strong>
+          <div class="meta">Alianzas con clínicas y gimnasios — contacta para precios y demo.</div>
+          <div style="margin-top:10px"><button class="btn btn-outline" onclick="location.href='#contacto'">Solicitar demo</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" style="margin-top:26px">
+      <h2>Contacto</h2>
+      <p class="meta">¿Interesado en alianzas o demo? Escríbenos y te devolvemos respuesta.</p>
+      <form id="contactForm" onsubmit="handleContact(event)" style="display:grid;gap:8px;max-width:680px;margin-top:12px">
+        <input required placeholder="Nombre" name="name" style="padding:10px;border-radius:8px;border:1px solid #dfeaf0" />
+        <input required placeholder="Correo" name="email" type="email" style="padding:10px;border-radius:8px;border:1px solid #dfeaf0" />
+        <textarea required placeholder="Mensaje" name="message" rows="4" style="padding:10px;border-radius:8px;border:1px solid #dfeaf0"></textarea>
+        <div style="display:flex;gap:8px">
+          <button class="btn btn-primary" type="submit">Enviar</button>
+          <button class="btn" type="button" onclick="contactDemo()">Solicitar demo</button>
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+        <div>© BIOFLEX SMART • Todos los derechos reservados</div>
+        <div style="color:var(--muted);font-size:13px">Precios en quetzales (Q)</div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Modal simple para suscripción -->
+  <div id="modal" style="position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(6,14,22,0.5)">
+    <div style="background:white;padding:18px;border-radius:12px;min-width:320px;max-width:420px">
+      <h3>Asistente Fantasma Plus</h3>
+      <p class="meta">Q.25/mes — activa alertas y reportes avanzados.</p>
+      <div style="display:flex;gap:10px;justify-content:flex-end;margin-top:12px">
+        <button class="btn" onclick="closeSubscribe()">Cancelar</button>
+        <button class="btn btn-primary" onclick="confirmSubscribe()">Confirmar suscripción</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openSubscribe(){document.getElementById('modal').style.display='flex'}
+    function closeSubscribe(){document.getElementById('modal').style.display='none'}
+    function confirmSubscribe(){
+      closeSubscribe();
+      alert('Gracias — suscripción activada (Q.25/mes) — verás confirmación por correo.');
+    }
+
+    function addToCart(product){
+      alert(product + ' añadido al carrito. Dirígete a pago en la próxima versión.');
+    }
+
+    function handleContact(e){
+      e.preventDefault();
+      const f = e.target;
+      alert('Mensaje enviado. Gracias, ' + f.name.value + '!');
+      f.reset();
+    }
+
+    function contactDemo(){
+      location.href = '#contacto';
+      alert('Por favor completa el formulario para solicitar demo.');
+    }
+  </script>
+</body>
+</html>
